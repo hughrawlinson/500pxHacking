@@ -1,20 +1,31 @@
+var request = require('request');
+
 var cameras = {};
-var username = "HughRawlinson1"
+var username = process.argv[2];
+console.log(username);
 
 var maxpage = 1000;
 
-function process(page){
+function run(page){
 	if(page <= maxpage){
-		$.ajax("https://api.500px.com/v1/photos?feature=user&username="+username+"&consumer_key=dvjPTm8TZS9WY6IUIupovlws1Dbj88QFbfc0vVSp&page="+page).done(
-			function(a){
-				maxpage = a.total_pages;
-				for(var i = 0; i < a.photos.length; i++){
-					cameras[a.photos[i].camera] = cameras[a.photos[i].camera]+1 || 1; 
+		request("https://api.500px.com/v1/photos?feature=user&username="+username+"&consumer_key="+process.env.FIVE_HUNDRED_PIXELS_KEY+"&page="+page,
+			function(b,a){
+				a = JSON.parse(a.body);
+				if(a.photos !== undefined){
+					maxpage = a.total_pages;
+					for(var i = 0; i < a.photos.length; i++){
+						cameras[a.photos[i].camera] = cameras[a.photos[i].camera]+1 || 1; 
+					}
+					run(page+1);
 				}
-				process(page+1)
-			}
-		);
+				else{
+					console.log(a);
+				}
+			});
+	}
+	else{
+		console.log(cameras);
 	}
 }
 
-process(1);
+run(1);
