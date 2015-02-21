@@ -14,4 +14,8 @@ Get a histogram of the cameras a user uses by running:
 
 `node ./lensesByUser.js [username]`.
 
+Get a histogram of the focal lengths a user uses by running:
+
+`node ./focalLengthsByUser.js [username]`.
+
 Good luck, padawans. :sparkles:
