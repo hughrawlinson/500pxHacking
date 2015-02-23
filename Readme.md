@@ -10,4 +10,48 @@ Get a histogram of a property over a users photos:
 
 `node ./camerasByUser.js [username] [property of the photo]`.
 
-`var validProperties = ["id","user_id","name","description","camera","lens","focal_length","iso","shutter_speed","aperture","times_viewed","rating","status","created_at","category","location","latitude","longitude","taken_at","hi_res_uploaded","for_sale","width","height","votes_count","favorites_count","comments_count","nsfw","sales_count","for_sale_date","highest_rating","highest_rating_date","license_type","converted","collections_count","crop_version","privacy","image_url","url","positive_votes_count","converted_bits","image_format"];`
+```javascript
+var validProperties = [
+  "id",
+  "user_id",
+  "name",
+  "description",
+  "camera",
+  "lens",
+  "focal_length",
+  "iso",
+  "shutter_speed",
+  "aperture",
+  "times_viewed",
+  "rating",
+  "status",
+  "created_at",
+  "category",
+  "location",
+  "latitude",
+  "longitude",
+  "taken_at",
+  "hi_res_uploaded",
+  "for_sale",
+  "width",
+  "height",
+  "votes_count",
+  "favorites_count",
+  "comments_count",
+  "nsfw",
+  "sales_count",
+  "for_sale_date",
+  "highest_rating",
+  "highest_rating_date",
+  "license_type",
+  "converted",
+  "collections_count",
+  "crop_version",
+  "privacy",
+  "image_url",
+  "url",
+  "positive_votes_count",
+  "converted_bits",
+  "image_format"
+];
+```
