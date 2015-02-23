@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/hughrawlinson/500pxHacking",
   "dependencies": {
-    "request": "~2.53.0"
+    "request": "~2.53.0",
+    "500px": "~0.5.1"
   }
 }
