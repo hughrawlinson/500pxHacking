@@ -73,12 +73,7 @@ function run(page){
 			for(var i = 0; i < results.photos.length;i++){
 				histogram[results.photos[i][property]] = histogram[results.photos[i][property]]+1 || 1;
 			}
-			if(page < results.total_pages){
-				run(page+1);
-			}
-			else{
-				console.log(histogram);
-			}
+			page < results.total_pages? run(page+1): console.log(histogram);
 		}
 	});
 }
