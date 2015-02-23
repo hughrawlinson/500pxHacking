@@ -1,4 +1,3 @@
-var request = require('request');
 var histogram = {};
 var username = process.argv[2];
 var property = process.argv[3];
