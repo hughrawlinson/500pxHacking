@@ -55,3 +55,5 @@ var validProperties = [
   "image_format"
 ];
 ```
+
+I'd thoroughly recommend using [loadenv](https://github.com/jacobwgillespie/loadenv), and having a `.env` file containing something like `FIVE_HUNDRED_PIXELS_KEY=XXXXXXXXXXXXXXXXXXXXXXXXXXXXX`.
