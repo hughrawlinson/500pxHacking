@@ -8,7 +8,7 @@ You'll need to set your 500px API key in an environmental variable named (for co
 
 Get a histogram of a property over a users photos:
 
-`node ./camerasByUser.js [username] [property of the photo]`.
+`node ./photoPropertyHistogramByUser.js [username] [property of the photo]`.
 
 ```javascript
 var validProperties = [
